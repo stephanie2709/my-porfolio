@@ -1,0 +1,422 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0b1120;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Navigation */
+
+header {
+    background-color: #101a2e;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+}
+
+.logo {
+    font-size: 30px;
+    color: white;
+}
+
+.logo span {
+    color: #38bdf8;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    color: #38bdf8;
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* Hero Section */
+
+.hero {
+    min-height: 520px;
+    padding: 100px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-text {
+    max-width: 550px;
+}
+
+.intro {
+    color: #38bdf8;
+    letter-spacing: 3px;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.hero h1 span {
+    color: #38bdf8;
+}
+
+.hero h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    color: #b7c3d5;
+    line-height: 1.8;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 13px 25px;
+    background-color: #38bdf8;
+    color: #0b1120;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: white;
+}
+
+/* Hero Design */
+
+.hero-image {
+    width: 320px;
+    height: 320px;
+    border: 2px solid #38bdf8;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(145deg, #142b4b, #101a2e);
+}
+
+.image-box {
+    text-align: center;
+}
+
+.image-box span {
+    color: #38bdf8;
+    letter-spacing: 3px;
+    font-size: 12px;
+}
+
+.image-box h2 {
+    margin-top: 15px;
+}
+
+/* General Sections */
+
+section:not(.hero) {
+    padding: 80px 8%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 3px;
+    background-color: #38bdf8;
+    margin: 12px auto;
+}
+
+/* About */
+
+.about p {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    color: #b7c3d5;
+    line-height: 2;
+}
+
+/* Skills */
+
+.skill-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.skill-card {
+    background-color: #14213a;
+    padding: 30px 20px;
+    border-radius: 8px;
+    border-bottom: 3px solid #38bdf8;
+}
+
+.skill-card h3 {
+    color: #38bdf8;
+    margin-bottom: 12px;
+}
+
+.skill-card p {
+    color: #b7c3d5;
+    font-size: 14px;
+}
+
+/* Projects */
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.project-card {
+    background-color: #14213a;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.project-card h3 {
+    color: #38bdf8;
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    color: #b7c3d5;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.project-card span {
+    font-size: 12px;
+    color: #38bdf8;
+}
+
+/* Education */
+
+.education-card {
+    max-width: 500px;
+    margin: auto;
+    padding: 30px;
+    background-color: #14213a;
+    border-left: 3px solid #38bdf8;
+    line-height: 2;
+}
+
+.education-card h3 {
+    color: #38bdf8;
+}
+
+/* Contact */
+
+.contact {
+    text-align: center;
+}
+
+.contact p {
+    color: #b7c3d5;
+    line-height: 1.8;
+}
+
+.github {
+    margin-top: 25px;
+}
+
+.github a {
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #101a2e;
+    color: #b7c3d5;
+    font-size: 13px;
+}
+
+/* PAGE ANIMATION */
+
+body {
+    animation: fadeIn 1.2s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* FLOATING HERO IMAGE */
+
+.hero-image {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+/* SKILL CARDS */
+
+.skill-card {
+    transition: 0.4s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-8px);
+    background-color: #1b2d4b;
+}
+
+/* PROJECT CARDS */
+
+.project-card {
+    transition: 0.4s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    border-bottom: 3px solid #38bdf8;
+}
+
+/* BUTTON ANIMATION */
+
+.btn {
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(56, 189, 248, 0.3);
+}
+
+/* NAVIGATION ANIMATION */
+
+.nav-links a {
+    transition: 0.3s ease;
+}
+
+/* Mobile Responsive */
+
+@media screen and (max-width: 768px) {
+
+    .navbar {
+        padding: 18px 6%;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #101a2e;
+        padding: 25px;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 70px 6%;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero-image {
+        width: 270px;
+        height: 270px;
+    }
+
+    .skill-container,
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+
+    section:not(.hero) {
+        padding: 65px 6%;
+    }
+}
+
+/* MOBILE ANIMATION RESPONSIVENESS */
+
+@media screen and (max-width: 768px) {
+
+    .hero-image {
+        animation: float 4s ease-in-out infinite;
+    }
+
+    .skill-card,
+    .project-card {
+        transition: 0.3s ease;
+    }
+
+    .skill-card:active,
+    .project-card:active {
+        transform: scale(0.97);
+    }
+
+    .btn:active {
+        transform: scale(0.95);
+    }
+
+}
